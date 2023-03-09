@@ -53,3 +53,4 @@ function dividir() {
    Em seguida, ao invés de mostrar o numero -89, mostre o resultado da operação */
   document.getElementById("resultadoDiv").innerHTML = divisao;
 }
+
