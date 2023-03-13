@@ -21,25 +21,26 @@ function calcularMedia() {
   // evite mexer no código acima!
 
   const media = (nota1 + nota2 + nota3 + nota4) / 4;
-  if(media = 0){
-    console.log("Infelizmente você zerou a prova :(  ");
-} else if(media > 0 && media < 3){
-    console.log("Caramba, deu ruim, você obteve media {nota}! Estude mais e tente novamente!");
-} else if(media > 3 && media < 6){
-  console.log("Você obteve media {nota}! Falta pouco para a média.");
-} else if(media >= 6 && media <= 7){
-  console.log("Você está na média com {nota}");
-} else if(media > 7 && media < 10){
-  console.log("Notão! Sua média é {nota}!");
-}
- else {media = 10
-    console.log("Hoje é seu aniversário? Pq você ta de parabéns! 10 de média");
-}
-
-
+  if(media === 0) {
+    mensagem = "Infelizmente você zerou a prova :( ";
+  } 
+  else if(media > 0 && media <= 3) {
+    mensagem = `Caramba, deu ruim, você obteve media ${media} ! Estude mais e tente novamente!`;
+  }
+  else if(media > 3 && media < 6) {
+    mensagem = `Você obteve media ${media}! Falta pouco para a média.`;
+  }
+  else if(media >= 6 && media <= 7) {
+    mensagem = `Você está na média com ${media}!`;
+  }else if(media > 7 && media <= 9.9) {
+    mensagem = `Notão! Sua média é ${media}!`;
+  }else if(media === 10) {
+    mensagem = `Hoje é seu aniversário? Pq você ta de parabéns! ${media} de média`;
+  } else if(media < 0) alert("Essa nota não é valida porque é menor que 0")
 
 
 
   // evite mexer na linha de código abaixo!
   document.getElementById("situacaoAluno").innerHTML = mensagem;
 }
+  
